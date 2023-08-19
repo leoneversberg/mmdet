@@ -1,0 +1,7 @@
+sudo docker build -t mmdet:latest .
+
+docker run --gpus all \
+  -v "/home/eversberg/projects/mmdet/my_configs:/mmdetection/my_configs:ro" \
+  -v "/home/eversberg/projects/mmdet/data:/mmdetection/data:ro" \
+  -v "/home/eversberg/projects/mmdet/workdir:/mmdetection/workdir" \
+  mmdet:latest

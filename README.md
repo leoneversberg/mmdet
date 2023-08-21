@@ -3,7 +3,9 @@ This code uses containerized MMDetection to train a Faster-RCNN object detection
 
 # Installation & Setup
 ## CVAT
-...
+You can create an account for the free online version [app.cvat.ai](https://app.cvat.ai/) or [run your own server](https://opencv.github.io/cvat/docs/administration/basics/installation/).
+
+
 
 ## Docker Image
 Build an image with `sudo docker build -t mmdet:latest .`

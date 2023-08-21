@@ -1,17 +1,22 @@
 # mmdet
-This code uses containerized MMDetection to train a Faster-RCNN object detection model on CVAT data. Training can be visualized with Tensorboard.
+Train a Faster-RCNN object detection model on CVAT data with containerized MMDetection. Training can be visualized with Tensorboard.
 
 # Installation & Setup
 ## CVAT
 You can create an account for the free online version [app.cvat.ai](https://app.cvat.ai/) or [run your own server](https://opencv.github.io/cvat/docs/administration/basics/installation/).
 
-
+After labeling your data, export a train and a test dataset in the COCO 1.0 format. 
+This will give you images and annotations folders, which should be placed in the data folder in train and test.
 
 ## Docker Image
 Build an image with `sudo docker build -t mmdet:latest .`
 
+## Tensorboard
+`pip install tensorboard`
+
 # Training
-Run the image with:
+## Run MMDetection training
+Run the image with the following command (modify path to mmdet folder):
 ```
 docker run --gpus all \
   -v "/path/to/mmdet/my_configs:/mmdetection/my_configs:ro" \
@@ -20,6 +25,9 @@ docker run --gpus all \
   mmdet:latest
 ```
 
+## Tensorboard
+To visualize the training process, cd to the latest folder in workdir and run `tensorboard --logdir vis_data/`.
+In your browser, open [http://localhost:6006/](http://localhost:6006/).
 
 # Used Frameworks
 - [MMDetection](https://github.com/open-mmlab/mmdetection) for model training

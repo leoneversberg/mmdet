@@ -76,12 +76,12 @@ param_scheduler = [
 optim_wrapper = dict(optimizer=dict(type='SGD', lr=0.00001, momentum=0.9, weight_decay=0.0001))
 
 # max_epochs for training
-train_cfg = dict(max_epochs=30)
+train_cfg = dict(max_epochs=500)
 
 # log config
 default_hooks = dict(
                     logger=dict(interval=100),
-                    checkpoint=dict(type='CheckpointHook', interval=10) # Save checkpoints periodically every interval
+                    checkpoint=dict(type='CheckpointHook', interval=100) # Save checkpoints periodically every interval
                     )
 
 # wwork_dir where model weights and tensorboard logs are saved

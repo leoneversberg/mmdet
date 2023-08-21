@@ -11,7 +11,7 @@ model = dict(
 
 # Modify dataset related settings
 dataset_type = 'CocoDataset'
-classes = ('Suzanne2',)
+classes = ('Suzanne',)
 
 # pipelines
 backend_args = None

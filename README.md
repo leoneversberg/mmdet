@@ -1,5 +1,6 @@
 # mmdet
 Train a Faster-RCNN object detection model on CVAT data with containerized MMDetection. Training can be visualized with Tensorboard.
+For more details, see [Learn How to Train Object Detection Models With MMDetection](https://medium.com/towards-artificial-intelligence/learn-how-to-train-object-detection-models-with-mmdetection-7a2441804875)
 
 # Installation & Setup
 ## CVAT
